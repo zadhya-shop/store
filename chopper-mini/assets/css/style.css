@@ -596,8 +596,8 @@ footer.main-footer nav.footer-nav ul li a{
 	        transform:translate(-50%, -50%);
 	text-align: center;
 }
-.site-hero_3 .page-title .big-title{font-size: 28px;}
-.site-hero_3 .page-title .small-title{font-size: 12px;}
+.site-hero_3 .page-title .big-title{font-size: 24px;}
+.site-hero_3 .page-title .small-title{font-size: 8px;}
 .agency{
 	width: 100%;
 	height: auto;
