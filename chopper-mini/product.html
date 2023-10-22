@@ -227,109 +227,11 @@
 					<p style="margin-bottom: 4rem;"></p>
 				</div>
 			</div>
-
-			<div class="col-md-6 col-sm-12">
-				<div class="row">
-					<link rel="stylesheet" href="assets/css/form.css">
-					<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
-					<script type="text/javascript"
-						src="assets/js/bootstrap3.4.1.min.js"></script>
-					<div class="container">
-						<div class="col-lg-6 col-lg-offset-3">
-							<div class="panel panel-success">
-								<div class="panel-heading">
-									Form Pemesanan
-								</div>
-								<div class="panel-body">
-									<div class="form-group">
-										<label>Nama</label>
-										<input type="text" name="name" class="form-control" placeholder="Nama"
-											id="name">
-									</div>
-									<div class="form-group">
-										<label>Nomor HP / WhatsApp</label>
-										<input type="text" name="phone" class="form-control"
-											placeholder="Nomor Kontak / WhatsApp" id="phone">
-									</div>
-									<div class="form-group">
-										<label>Alamat Lengkap</label>
-										<input type="alamat" name="alamat" class="form-control"
-											placeholder="Pastikan isi dengan lengkap ya..." id="alamat">
-									</div>
-									<div class="form-group">
-										<label>Pilih Produk</label>
-										<select name="product" class="form-control" id="product">
-											<option value="">-- Pilih Produk --</option>
-											<option value="Chopper Mini Portable">Chopper Mini Portable</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Pembayaran</label>
-										<select name="pembayaran" class="form-control" id="pembayaran">
-											<option value="">-- Pembayaran --</option>
-											<option value="Transfer BCA">Transfer BCA</option>
-											<option value="Transfer BRI">Transfer BRI</option>
-											<option value="COD">COD</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Catatan</label>
-										<textarea name="description" class="form-control" rows="3"
-											id="description"></textarea>
-									</div>
-									<div class="parent">
-										<button class="btn red btn-success send" style=" margin-top:30px"><span>Pesan
-												Sekarang</span></button>
-									</div>
-
-									<div id="text-info"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<script type="text/javascript">
-						$(document).on('click', '.send', function () {
-							/* Inputan Formulir */
-							var input_name = $("#name").val(),
-								input_phone = $("#phone").val(),
-								input_alamat = $("#alamat").val(),
-								input_product = $("#product").val(),
-								input_pembayaran = $("#pembayaran").val(),
-								input_description = $("#description").val();
-
-							/* Pengaturan Whatsapp */
-							var walink = 'https://api.whatsapp.com/send',
-								phone = '6285702552668',
-								text = 'Halo saya ingin memesan ',
-								text_yes = 'Pesanan Anda berhasil terkirim.',
-								text_no = 'Isilah formulir terlebih dahulu.';
-
-							/* Smartphone Support */
-							if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-								var walink = 'whatsapp://send';
-							}
-
-							if (input_name != "" && input_phone != "" && input_product != "") {
-								/* Whatsapp URL */
-								var checkout_whatsapp = walink + '?phone=' + phone + '&text=' + text + '%0A%0A' +
-									'Nama : ' + input_name + '%0A' +
-									'Nomor HP / Whatsapp : ' + input_phone + '%0A' +
-									'Alamat Lengkap : ' + input_alamat + '%0A' +
-									'Produk : ' + input_product + '%0A' +
-									'Pembayaran : ' + input_pembayaran + '%0A' +
-									'Catatan : ' + input_description + '%0A';
-
-								/* Whatsapp Window Open */
-								window.open(checkout_whatsapp, '_blank');
-								document.getElementById("text-info").innerHTML = '<div class="alert alert-success">' + text_yes + '</div>';
-							} else {
-								document.getElementById("text-info").innerHTML = '<div class="alert alert-danger">' + text_no + '</div>';
-							}
-						});
-					</script>
-					</form>
+				<div>
+					<a href="https://zadhya-shop.github.io/store/chopper-mini/form-pemesanan.html">
+						<img src="assets/img/button 1.gif" width="30%">
+					</a>
 				</div>
-			</div>
 		</div>
 	</section>
 
