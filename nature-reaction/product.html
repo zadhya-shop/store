@@ -4,6 +4,30 @@
 <head>
     <title>NR Serum</title>
     <link rel="shortcut icon" href="favicon 3.png">
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+
+            ttq.load('CKRL35BC77U1BIIGDOUG');
+            ttq.page();
+        }(window, document, 'ttq');
+        // add this before event code to all pages where PII data postback is expected and appropriate 
+        ttq.identify({
+            "email": "<hashed_email_address>", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
+            "phone_number": "<hashed_phone_number>", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
+            "external_id": "<hashed_extenal_id>", // A unique ID from the advertiser such as user or external cookie IDs. It must be hashed with SHA256 on the client side.
+        });
+
+        ttq.track('ClickButton', {
+            "contents": [{
+                "content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
+                "content_type": "<content_type>", // string. Either product or product_group.
+                "content_name": "<content_name>", // string. The name of the page or product. Example: "shirt".
+            }],
+            "value": "<content_value>", // number. Value of the order or items sold. Example: 100.
+            "currency": "<content_currency>", // string. The 4217 currency code. Example: "USD".
+        });
+    </script>
     <style>
         #progressbar {
             text-align: center;
@@ -35,21 +59,21 @@
 </head>
 
 <body style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
-    <img src="NR_LP1.png"> 
+    <img src="NR_LP1.png">
     <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
-        <img src="NR_LP2.png">  
-    </div>  
+        <img src="NR_LP2.png">
+    </div>
     <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
         <img src="NR_LP3.png">
     </div>
-        <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
+    <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
         <img src="NR_LP4.png">
     </div>
     <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;"></div>
-        <img src="NR_LP5.png">
+    <img src="NR_LP5.png">
     </div>
     <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;"></div>
-        <img src="NR_LP6.png">
+    <img src="NR_LP6.png">
     </div>
     <div style="text-align:center;">
         <b
@@ -58,20 +82,20 @@
     </div>
     <div style="text-align:center;">
         <h
-        style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: large">
-        1 Menit</h>
+            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: large">
+            1 Menit</h>
         <h id="timeleft" style="font-family: Verdana;font-size: large;">60 Detik Lagi</h>
-   </div>
-   <div id="progressbar" style="margin-left: 12.5%;">
+    </div>
+    <div id="progressbar" style="margin-left: 12.5%;">
 
-       <b id="timeleft" style="color: transparent;">.</b>
-       <div id="progress" style="width: 100%;">
-       </div>
-   </div>
+        <b id="timeleft" style="color: transparent;">.</b>
+        <div id="progress" style="width: 100%;">
+        </div>
+    </div>
     <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
         <img src="arrow2.gif" width="55%">
     </div>
-    
+
     <script type="text/javascript">
         let time_left = 60;
         var progress = document.getElementById("progress");
@@ -98,9 +122,10 @@
     </div>
     <div style="text-align: center;margin-top: 8rem;margin-bottom: 0rem;">
         <img src="NR_LP7.png">
-    </div> 
+    </div>
     <div style="text-align: center;margin-top: 8rem;margin-bottom: 0rem;">
         <img src="NR_LP8.png">
     </div>
 </body>
+
 </html>
